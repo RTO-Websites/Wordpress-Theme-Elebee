@@ -1,0 +1,8 @@
+{
+  "name": "Elebee",
+  "dependencies": {
+    "compass-mixins": "^1.0.2",
+    "modernizr": "~2.8.3",
+    "normalize-css": "^7.0.0"
+  }
+}

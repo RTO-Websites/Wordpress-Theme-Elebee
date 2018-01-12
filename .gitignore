@@ -1,0 +1,5 @@
+.idea
+.sprites-cache
+/node_modules
+/bower_components
+src/vendor
