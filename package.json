@@ -1,10 +1,9 @@
 {
   "name": "elebee",
-  "version": "0.1.0",
-  "description": "Custom WordPress Theme",
+  "description": "WordPress theme boilerplate for the use with Elementor.",
   "repository": {
     "type": "git",
-    "url": "-"
+    "url": "https://github.com/RTO-Websites/Wordpress-Theme-Elebee.git"
   },
   "keywords": [
     "WordPress",
