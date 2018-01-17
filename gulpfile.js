@@ -74,7 +74,6 @@ var ElebeeGulp = (function() {
         copy: [
           src + '/**/**/*',
           '!' + src + '/.sprites-cache',
-          '!' + src + '/style.scss',
           '!' + src + '/css/**/*',
           '!' + src + '/js/**/*',
           '!' + src + '/img/**/*',
@@ -158,7 +157,6 @@ var ElebeeGulp = (function() {
     var defaultTaskDependencies = [
       'compile:scss:admin',
       'compile:scss:main',
-      'compile:scss:style',
       'compile:coffee:main',
       'uglify:js:vendor',
       'images',
@@ -175,7 +173,6 @@ var ElebeeGulp = (function() {
     gulp.task('clean:images', self.taskCleanImages);
     gulp.task('clean:css:admin', self.taskCleanCssAdmin);
     gulp.task('clean:css:main', self.taskCleanCssMain);
-    gulp.task('clean:css:style', self.taskCleanCssStyle);
     gulp.task('clean:js:main', self.taskCleanJsMain);
     gulp.task('clean:js:vendor', self.taskCleanJsVendor);
     gulp.task('clean:copy', self.taskCleanCopy);
@@ -185,7 +182,6 @@ var ElebeeGulp = (function() {
     gulp.task('images', ['clean:images', 'sprites'], self.taskImages);
     gulp.task('compile:scss:admin', ['clean:css:admin'/*, 'lint:scss:main'*/], self.taskCompileScssAdmin);
     gulp.task('compile:scss:main', ['clean:css:main', 'lint:scss:main', 'sprites'], self.taskCompileScssMain);
-    gulp.task('compile:scss:style', ['clean:css:style'], self.taskCompileScssStyle);
     gulp.task('compile:coffee:main', ['clean:js:main', 'lint:coffee:main'], self.taskCompileCoffeeMain);
     gulp.task('uglify:js:vendor', ['clean:js:vendor'], self.taskUglifyJsVendor);
     gulp.task('copy', ['clean:copy'], self.taskCopy);
@@ -221,16 +217,6 @@ var ElebeeGulp = (function() {
   ElebeeGulp.prototype.taskCleanCssAdmin = function() {
     return self.taskClean([
       paths.dist.css + '/admin.*'
-    ]);
-  };
-
-  /**
-   *
-   * @returns {*}
-   */
-  ElebeeGulp.prototype.taskCleanCssStyle = function() {
-    return self.taskClean([
-      paths.dist.root + '/style.scss'
     ]);
   };
 
@@ -282,7 +268,6 @@ var ElebeeGulp = (function() {
   ElebeeGulp.prototype.taskCleanCopy = function() {
     return self.taskClean([
       paths.dist.root + '/**/*',
-      '!' + paths.dist.root + '/style.css',
       '!' + paths.dist.css,
       '!' + paths.dist.css + '/**/*',
       '!' + paths.dist.js,
@@ -356,25 +341,6 @@ var ElebeeGulp = (function() {
    */
   ElebeeGulp.prototype.taskCompileScssAdmin = function() {
     return self.taskCompileScss(paths.src.scss.admin, 'admin.min.css');
-  };
-
-  /**
-   *
-   * @returns {*}
-   */
-  ElebeeGulp.prototype.taskCompileScssStyle = function() {
-    return gulp.src('src/style.scss')
-      .pipe(plugins.replace('#{pkg(name)}', pkg.name))
-      .pipe(plugins.replace('#{pkg(description)}', pkg.description))
-      .pipe(plugins.replace('#{pkg(author)}', pkg.author))
-      .pipe(plugins.replace('#{pkg(version)}', pkg.version))
-      .pipe(plugins.replace('#{year()}', new Date().getFullYear()))
-      .pipe(plugins.sassBulkImport())
-      .pipe(plugins.sass(sassConfig)
-        .on('error', plugins.sass.logError))
-      .pipe(plugins.notify(notifyConfig))
-      .pipe(gulp.dest(paths.dist.root))
-      .pipe(plugins.livereload());
   };
 
   /**
