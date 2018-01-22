@@ -25,12 +25,12 @@
   },
   "stylelint": {
     "extends": [
-      "./config/lintScss.json"
+      "./node_modules/elebee-gulp/config/lintScss.json"
     ]
   },
   "coffeelint": {
     "extends": [
-      "./config/lintCoffee.json"
+      "./node_modules/elebee-gulp/config/lintCoffee.json"
     ]
   }
 }
