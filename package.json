@@ -20,7 +20,7 @@
   "author": "RTO GmbH <info@rto.de>",
   "license": "GPL-3.0",
   "dependencies": {
-    "elebee-gulp": "^0.1.0",
+    "elebee-gulp": "RTO-Websites/elebee-gulp#0.x.x",
     "gulp": "^3.9.1"
   },
   "stylelint": {
