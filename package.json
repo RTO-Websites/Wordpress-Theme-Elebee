@@ -1,10 +1,9 @@
 {
   "name": "elebee",
-  "version": "0.1.0",
-  "description": "Custom WordPress Theme",
+  "description": "WordPress theme boilerplate for the use with Elementor.",
   "repository": {
     "type": "git",
-    "url": "-"
+    "url": "https://github.com/RTO-Websites/Wordpress-Theme-Elebee.git"
   },
   "keywords": [
     "WordPress",
@@ -19,37 +18,19 @@
     "bower"
   ],
   "author": "RTO GmbH <info@rto.de>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "dependencies": {
-    "del": "^3.0.0",
-    "fs": "0.0.1-security",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-coffee": "^2.3.5",
-    "gulp-coffeelint": "^0.6.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-jshint": "^2.1.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-notify": "^3.1.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.1",
-    "gulp-replace": "^0.6.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-sass-bulk-import": "^1.0.1",
-    "gulp-sourcemaps": "^2.6.3",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "gulp.spritesmith-multi": "^3.1.0",
-    "jshint": "^2.9.5",
-    "jsonfile": "^3.0.1",
-    "merge-stream": "^1.0.1",
-    "node-neat": "^1.7.2",
-    "path": "^0.12.7",
-    "postcss-reporter": "^5.0.0",
-    "postcss-scss": "^1.0.3",
-    "stylelint": "7.10.1"
+    "elebee-gulp": "RTO-Websites/elebee-gulp#0.x.x",
+    "gulp": "^3.9.1"
+  },
+  "stylelint": {
+    "extends": [
+      "./node_modules/elebee-gulp/config/lintScss.json"
+    ]
+  },
+  "coffeelint": {
+    "extends": [
+      "./node_modules/elebee-gulp/config/lintCoffee.json"
+    ]
   }
 }

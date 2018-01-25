@@ -15,4 +15,4 @@ if( ! defined( 'TEXTDOMAIN' ) ) {
 
 }
 
-\Elebee\Lib\Elebee::run();
+\ElebeeCore\Lib\Elebee::run();

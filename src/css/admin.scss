@@ -3,18 +3,19 @@ $dusty-gray: #999;
 @import 'admin/featured-image';
 
 li {
-  .wp-menu-image:before {
+  .wp-menu-image::before {
     opacity: 0.6;
   }
 
   &:hover {
-    .wp-menu-image:before {
+    .wp-menu-image::before {
       color: $dusty-gray !important;
       opacity: 0.1;
     }
   }
 }
 
+/* stylelint-disable-next-line selector-no-id */
 #postimagediv .inside img {
   width: 100%;
 }
