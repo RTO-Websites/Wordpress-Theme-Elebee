@@ -4,16 +4,6 @@
     <meta charset="<?php echo get_bloginfo( 'charset' ); ?>">
     <meta name="viewport"
             content="width=device-width, initial-scale=1.0">
-    <script class="elebee-vars">
-      var elebee = {
-        websiteName: '<?php bloginfo( 'name' ); ?>',
-        websiteUrl: '<?php echo esc_url( get_site_url() ); ?>',
-        //themeUrl: '<?php //echo ThemeUrl; ?>//',
-        isSearch: <?php echo number_format( is_search() ); ?>,
-        isMobile: <?php echo number_format( wp_is_mobile() ); ?>,
-        debug: <?php echo number_format( WP_DEBUG ); ?>
-      };
-    </script>
 
     <?php wp_head(); ?>
 
