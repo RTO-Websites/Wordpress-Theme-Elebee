@@ -20,8 +20,13 @@
   "author": "RTO GmbH <info@rto.de>",
   "license": "GPL-3.0",
   "dependencies": {
+    "ajv": "^6.0.0",
     "elebee-gulp": "RTO-Websites/elebee-gulp#semver:0.*.*",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "postcss-less": "^2.0.0",
+    "postcss-scss": "^2.0.0",
+    "stylelint": "^8.3.0",
+    "sugarss": "^2.0.0"
   },
   "stylelint": {
     "extends": [
