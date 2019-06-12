@@ -37,14 +37,15 @@ jQuery ($) ->
     return
 
   ###
-    * Logs a 'Website loaded.' info text.
+    * Fix bug in lightbox swiping.
     *
     * @since 0.1.0
     * @return {void}
   ###
   onWindowLoad = (event) ->
-    console.log('Website loaded.')
-    return
+    if typeof Swiper is 'function'
+      Swiper.defaults.noSwipingClass = 'elementor-swiper-button'
+  return
 
   init()
   registerEventListeners()

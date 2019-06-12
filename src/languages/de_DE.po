@@ -1,18 +1,1732 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Elebee\n"
-"POT-Creation-Date: 2018-01-10 12:00+0100\n"
-"PO-Revision-Date: 2018-01-10 12:00+0100\n"
+"Project-Id-Version: elbee-core\n"
+"POT-Creation-Date: 2019-06-12 09:53+0200\n"
+"PO-Revision-Date: 2019-06-12 11:16+0200\n"
 "Last-Translator: \n"
-"Language-Team: RTO GmbH <info@rto.de>\n"
+"Language-Team: RTO\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.5\n"
-"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ../../../../..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n;_x\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: docker/Wordpress-Theme-Elebee/ancestor/src/languages\n"
+"X-Poedit-SearchPath-1: RtoGit/elebee-core/src\n"
+"X-Poedit-SearchPathExcluded-0: RtoGit/elebee-core/src/Elementor/Widgets/"
+"BetterImageGallery\n"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:176
+msgid "Auto indent"
+msgstr "Autoformatierung"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:182
+msgid "Hint"
+msgstr "Hinweis"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:188
+msgid "Block comment"
+msgstr "Blockkommentar"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:194
+msgid "Uncomment"
+msgstr "Unkommentieren"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:200
+msgid "Delete line"
+msgstr "Zeile löschen"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:206
+msgid "Undo"
+msgstr "Rückgänging machen"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:212
+msgid "Redo"
+msgstr "Änderung wiederholen"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:219
+msgid "Find"
+msgstr "Finden"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:225
+msgid "Find next"
+msgstr "Nächstes finden"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:231
+msgid "Find previous"
+msgstr "Vorheriges finden"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:237
+msgid "Replace"
+msgstr "Ersetzen"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:243
+msgid "Replace all"
+msgstr "Alle ersetzten"
+
+#: RtoGit/elebee-core/src/Admin/Editor/CodeMirror.php:250
+msgid "Shortcuts"
+msgstr "Shortcuts"
+
+#: RtoGit/elebee-core/src/Admin/ElebeeAdmin.php:114
+msgid "Goolge Tracking ID format is invalid."
+msgstr "Falsches Format für Google Tracking ID."
+
+#: RtoGit/elebee-core/src/Admin/ElebeeAdmin.php:182
+#: RtoGit/elebee-core/src/Admin/ElebeeAdmin.php:183
+msgid "Elebee Settings"
+msgstr "Elebee Einstellungen"
+
+#: RtoGit/elebee-core/src/Admin/ElebeeAdmin.php:203
+msgid ""
+"The theme Eleebee works best with Elementor. Please install or activate "
+"Elementor-Plugin."
+msgstr ""
+"Eleebee-Theme funktioniert am besten mit Elementor. Bitte installiere oder "
+"aktiviere Elementor-Plugin."
+
+#: RtoGit/elebee-core/src/Admin/Setting/CoreData/SettingAddress.php:23
+msgid "Address"
+msgstr "Adresse"
+
+#: RtoGit/elebee-core/src/Admin/Setting/CoreData/SettingEmail.php:23
+msgid "E-Mail address"
+msgstr "E-Mail Adresse"
+
+#: RtoGit/elebee-core/src/Admin/Setting/CoreData/SettingPhone.php:23
+msgid "Phone"
+msgstr "Telefon"
+
+#: RtoGit/elebee-core/src/Admin/Setting/Google/Analytics/SettingAnonymizeIp.php:23
+msgid "Anonymize IP"
+msgstr "IP anonymisieren"
+
+#: RtoGit/elebee-core/src/Admin/Setting/Google/Analytics/SettingTrackingId.php:23
+msgid "Trackting-ID"
+msgstr "Tracking-ID"
+
+#: RtoGit/elebee-core/src/Admin/Setting/SettingIsExclusive.php:23
+msgid "Is Exclusive"
+msgstr "Ist Exklusiv"
+
+#: RtoGit/elebee-core/src/Admin/Setting/SettingJQuery.php:23
+msgid "jQuery"
+msgstr "jQuery"
+
+#: RtoGit/elebee-core/src/Admin/Setting/SettingJQuery.php:24
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:99
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:122
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:245
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:327
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:424
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:491
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:604
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:593
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:688
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:784
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:881
+msgid "Default"
+msgstr "Standard"
+
+#: RtoGit/elebee-core/src/Admin/Setting/SettingJQuery.php:25
+msgid "3.3.1 (CDN)"
+msgstr "3.3.1 (CDN)"
+
+#: RtoGit/elebee-core/src/Admin/Setting/SettingJQuery.php:26
+msgid "3.3.1 (local)"
+msgstr "3.3.1 (local)"
+
+#: RtoGit/elebee-core/src/Elementor/ElebeeElementor.php:222
+msgid "Elebee Elements"
+msgstr "Elebee Elemente"
+
+#: RtoGit/elebee-core/src/Elementor/ElebeeElementor.php:230
+msgid "Elebee Elements - Exclusive"
+msgstr "Elebee Elemente - Exklusiv"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Fitty/WidgetExtensionFitty.php:61
+msgid "Fitty"
+msgstr "Fitty"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Fitty/WidgetExtensionFitty.php:64
+msgid "On"
+msgstr "An"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Fitty/WidgetExtensionFitty.php:65
+msgid "Off"
+msgstr "Aus"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/FormFields/FormFields.php:90
+msgid "Widgets Padding"
+msgstr "Widgets Padding"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/FormFields/FormFields.php:94
+#: RtoGit/elebee-core/src/Elementor/Extensions/FormFields/FormFields.php:113
+msgid "Sets the default space between widgets (Default: 20)"
+msgstr "Abstand zwischen den Widgets (Default: 20)"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/FormFields/FormFields.php:107
+msgid "Padding Between Widgets"
+msgstr "Padding zwischen den Widgets"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/FormFields/FormFields.php:135
+msgid "From till time"
+msgstr "Von bis Zeitraum"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/FormFields/FormFields.php:148
+msgid "Placeholder till"
+msgstr "Platzhalter bis"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:82
+msgid "Responsive Aspect Ratio"
+msgstr "Responsive Seitenverhältnis"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:95
+msgid "Aspect Ratio"
+msgstr "Seitenverhältnis"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:98
+msgid "Fix"
+msgstr "Fest"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:112
+msgid "Ratio"
+msgstr "Verhältnis"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:116
+msgid "Square"
+msgstr "Quadratisch"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:117
+msgid "16:9"
+msgstr "16:9"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:118
+msgid "4:3"
+msgstr "4:3"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:119
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:280
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:359
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/ResponsiveAspectRatio/WidgetExtensionResponsiveAspectRatio.php:130
+msgid "Custom Ratio"
+msgstr "Benutzerdefiniertes Verhältnis"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:105
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:121
+msgid "Sticky"
+msgstr "Sticky"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:118
+msgid "Make this section sticky"
+msgstr "Diese Sektion sticky machen"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:129
+msgid "Add a placeholder"
+msgstr "Platzhalter hinzufügen"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:132
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:208
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:290
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:372
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:544
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:556
+msgid "Show"
+msgstr "Anzeigen"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:133
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:203
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:209
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:291
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:373
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:545
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:557
+msgid "Hide"
+msgstr "Verbergen"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:143
+msgid "Position"
+msgstr "Position"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:146
+msgid "Top"
+msgstr "Top"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:147
+msgid "Bottom"
+msgstr "Bottom"
+
+#: RtoGit/elebee-core/src/Elementor/Extensions/Sticky/WidgetExtensionSticky.php:158
+msgid "Offset"
+msgstr "Versatz"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:53
+msgid "RTO"
+msgstr "RTO"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:82
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:136
+msgid "Archive"
+msgstr "Archiv"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:90
+msgid "Add archive link"
+msgstr "Archivlink hinzufügen"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:94
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:144
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:267
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:349
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:446
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:455
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1022
+msgid "No"
+msgstr "Nein"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:95
+msgid "Below"
+msgstr "Unterhalb"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:96
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:895
+msgid "Above"
+msgstr "Oberhalb"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:97
+msgid "Both"
+msgstr "Beide"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:105
+msgid "Single category text"
+msgstr "Einzelkategorietext"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:114
+msgid "Multiple category text"
+msgstr "Multikategorietext"
+
+#: RtoGit/elebee-core/src/Elementor/Skins/SkinArchive.php:144
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:360
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:421
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:185
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:265
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:425
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:292
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:360
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:402
+msgid "Color"
+msgstr "Farbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:69
+msgid "Better Accordion"
+msgstr "Better Accordion"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:98
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:262
+msgid "Accordion"
+msgstr "Akkordeon"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:105
+msgid "Accordion Items"
+msgstr "Akkordeonelemente"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:109
+msgid "Accordion #1"
+msgstr "Akkordeon Nr.1"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:110
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:114
+msgid ""
+"I am item content. Click edit button to change this text. Lorem ipsum dolor "
+"sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec "
+"ullamcorper mattis, pulvinar dapibus leo."
+msgstr ""
+"Ich bin ein Inhalt. Klick auf 'Bearbeiten'-Button um diesen Text zu ändern. "
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, "
+"luctus nec ullamcorper mattis, pulvinar dapibus leo."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:113
+msgid "Accordion #2"
+msgstr "Akkordeon Nr.2"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:120
+msgid "Title & Content"
+msgstr "Titel und Inhalt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:122
+msgid "Accordion Title"
+msgstr "Akkordeontitel"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:127
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:401
+msgid "Content"
+msgstr "Inhalt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:129
+msgid "Accordion Content"
+msgstr "Akkordeoninhalt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:140
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:180
+msgid "Custom Icon"
+msgstr "Benutzerdefeniertes Icon"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:143
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:266
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:348
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:445
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:454
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1021
+msgid "Yes"
+msgstr "Ja"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:152
+msgid "Accordion Icon"
+msgstr "Akkordeon Icon"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:194
+msgid "Icon Animation"
+msgstr "Iconanimation"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:198
+msgid "None"
+msgstr "Keine"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:199
+msgid "Turn left 90°"
+msgstr "Um 90° nach links drehen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:200
+msgid "Turn left 180°"
+msgstr "Um 180° nach links drehen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:201
+msgid "Turn right 90°"
+msgstr "Um 90° nach rechts drehen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:202
+msgid "Turn right 180°"
+msgstr "Um 180° nach rechts drehen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:212
+msgid "Icons size"
+msgstr "Icongröße"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:239
+msgid "Icon Margin"
+msgstr "Icon-Margin"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:251
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:590
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:685
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:781
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:878
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:207
+msgid "View"
+msgstr "Ansicht"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:270
+msgid "Icon Alignment"
+msgstr "Icon-Ausrichtung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:274
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:627
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:188
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:931
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:239
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:322
+msgid "Left"
+msgstr "Links"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:275
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:635
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:196
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:939
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:247
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:330
+msgid "Right"
+msgstr "Rechts"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:283
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:983
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1425
+msgid "Border Width"
+msgstr "Randbreite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:306
+msgid "Separator Width"
+msgstr "Trennerbreite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:326
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:967
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1241
+msgid "Border Color"
+msgstr "Rahmenfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:340
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:147
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:227
+msgid "Title"
+msgstr "Titel"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:349
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:410
+msgid "Background"
+msgstr "Hintergrund"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BetterAccordion/WidgetBetterAccordion.php:376
+msgid "Active Color"
+msgstr "Aktive Farbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:55
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:80
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:132
+msgid "Big and small image with description"
+msgstr "Großes und kleines Bild mit Beschreibung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:87
+msgid "Orientation"
+msgstr "Ausrichtung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:91
+msgid "Big/Small"
+msgstr "Groß/klein"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:92
+msgid "Small/Big"
+msgstr "Klein/Groß"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:100
+msgid "Big image"
+msgstr "Großes Bild"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:111
+msgid "Small image"
+msgstr "Kleines Bild"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:122
+msgid "Description"
+msgstr "Beschreibung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:140
+msgid "Spacing middle"
+msgstr "Abstand dazwischen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:164
+msgid "Spacing text"
+msgstr "Abstandstext"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/BigAndSmallImageWithDescription/WidgetBigAndSmallImageWithDescription.php:197
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1136
+msgid "Typography"
+msgstr "Typografie"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:103
+msgid "Field is empty"
+msgstr "Das Feld ist leer"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:104
+msgid "Email format is invalid"
+msgstr "E-Mail-Format ist ungültig"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:105
+msgid "This field is required"
+msgstr "Das ist ein Pflichtfeld"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:106
+msgid "Thank you for your submission!"
+msgstr "Vielen Dank!"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:131
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:167
+msgid "Comment Form"
+msgstr "Kommentar-Formular"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:174
+msgid "Page"
+msgstr "Seite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:175
+msgid "Comments get posted to the selected page."
+msgstr "Kommentare zu der Seite."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:186
+msgid "Display Warning"
+msgstr "Warnung anzeigen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:199
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:220
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:232
+msgid "Name"
+msgstr "Name"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:206
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:288
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:370
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:218
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:300
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:397
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:824
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:524
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:619
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:715
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:812
+msgid "Label"
+msgstr "Beschriftung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:230
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:312
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:409
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:478
+#: RtoGit/elebee-core/src/Elementor/Widgets/Placeholder/WidgetPlaceholder.php:55
+#: RtoGit/elebee-core/src/Elementor/Widgets/Placeholder/WidgetPlaceholder.php:101
+#: RtoGit/elebee-core/src/Elementor/Widgets/Placeholder/WidgetPlaceholder.php:108
+msgid "Placeholder"
+msgstr "Platzhalter"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:242
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:324
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:421
+msgid "Field Width"
+msgstr "Feldbreite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:264
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:346
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:443
+msgid "Required"
+msgstr "Erforderlich"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:281
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:302
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:314
+msgid "Email"
+msgstr "E-Mail"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:363
+msgid "Extra"
+msgstr "Extra"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:382
+msgid "Field type"
+msgstr "Feldtyp"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:384
+msgid "String"
+msgstr "Zeichenkette"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:385
+msgid "Url"
+msgstr "Url"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:399
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:411
+msgid "Subject"
+msgstr "Betreff"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:460
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:469
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:480
+msgid "Comment"
+msgstr "Kommentar"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:467
+msgid "Comment label"
+msgstr "Kommentarbeschriftung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:470
+msgid "Type your comment label text here"
+msgstr "Gebe hier den Kommentartext ein"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:481
+msgid "Type your comment placeholder text here"
+msgstr "Gebe hier den Kommentarplatzhalter ein"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:488
+msgid "Comment Field Width"
+msgstr "Kommentarfeldbreite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:509
+msgid "Rows"
+msgstr "Zeilen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:525
+msgid "Input Size"
+msgstr "Eingabefeldgröße"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:528
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:588
+msgid "Extra Small"
+msgstr "Sehr klein"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:529
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:589
+msgid "Small"
+msgstr "Klein"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:530
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:590
+msgid "Medium"
+msgstr "Medium"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:531
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:591
+msgid "Large"
+msgstr "Groß"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:532
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:592
+msgid "Extra Large"
+msgstr "Sehr groß"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:542
+msgid "Show comments cookies opt-in checkbox."
+msgstr "Opt-In-Checkbox für Kommentar-Cookies anzeigen."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:554
+msgid "Show GDPR opt-in checkbox."
+msgstr "Opt-In-Checkbox für DSGVO anzeigen."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:568
+msgid "Submit Button"
+msgstr "Absenden-Button"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:575
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:154
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:192
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:310
+msgid "Text"
+msgstr "Text"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:577
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:578
+msgid "Send"
+msgstr "Senden"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:585
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1071
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1375
+msgid "Size"
+msgstr "Größe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:601
+msgid "Column Width"
+msgstr "Spaltenbreite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:623
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:184
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:927
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:235
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:318
+msgid "Alignment"
+msgstr "Ausrichtung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:631
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:192
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:935
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:243
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:326
+msgid "Center"
+msgstr "Zentriert"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:639
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:943
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:251
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:334
+msgid "Justified"
+msgstr "Blocksatz"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:651
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:533
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:628
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:724
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:821
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1267
+msgid "Icon"
+msgstr "Icon"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:661
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:554
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:649
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:745
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:842
+msgid "Icon Position"
+msgstr "Icon-Position"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:665
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:557
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:653
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:749
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:846
+msgid "Before"
+msgstr "Bevor"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:666
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:558
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:654
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:750
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:847
+msgid "After"
+msgstr "Nach"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:677
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:570
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:665
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:761
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:858
+msgid "Icon Spacing"
+msgstr "Icon-Abstand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:700
+msgid "Form texts"
+msgstr "Formulartexte"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:709
+msgid "GDPR"
+msgstr "DSGVO"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:711
+#, php-format
+msgid ""
+"I have read the <a href=\"%s\">privacy policy</a> and accept that my data "
+"will be saved for the pupose of contact or further inquiries."
+msgstr ""
+"Ich habe den <a href=\"%s\">Datenschutz</a> gelesen und bestätige, dass "
+"meine Daten zur Kontaktaufnahme und weiteren Anfragen gespeichert werden."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:718
+msgid "Login prompt"
+msgstr "Anmeldeaufforderung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:720
+msgid "You must be logged in, to post a comment."
+msgstr "Du musst angemeldet sein, um einen Kommentar schreiben zu können."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:727
+msgid "Logged in as text"
+msgstr "Angemeldet als Text"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:729
+msgid "Logged in as"
+msgstr "Angemeldet als"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:730
+#, php-format
+msgid "Use \"%1$s\" placeholder to display the username"
+msgstr "Benutze \"%1$s\" Platzhalter, um den Benutzername anzuzeigen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:737
+msgid "Log out Text"
+msgstr "Abmeldentext"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:739
+msgid "Log out?"
+msgstr "Abmelden?"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:740
+msgid "Type your log out text here"
+msgstr "Gebe hier den Abmelden-Text ein"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:747
+msgid "Required sign"
+msgstr "Zeichen für 'Erforderlich'"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:757
+msgid "Required Text"
+msgstr "Text für 'Erforderlich'"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:759
+#, php-format
+msgid "Required fields are marked with %s"
+msgstr "Pflichtfelder sind mit %s markiert"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:760
+#, php-format
+msgid "Use \"%s\" placeholder to display the mark sign"
+msgstr "Benutze \"%s\" Platzhalter, um den Platzhalterzeichen anzuzeigen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:771
+msgid "Form"
+msgstr "Formular"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:779
+msgid "Vertical gap between fields"
+msgstr "Vertikaler Feldabstand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:799
+msgid "Horizontal gap between fields"
+msgstr "Horizontaler Feldabstand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:800
+msgid "Affects adjacent fields."
+msgstr "Betrifft benachbarte Felder."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:832
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1026
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1134
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:371
+msgid "Spacing"
+msgstr "Abstand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:857
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1047
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1123
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1219
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:912
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1031
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1068
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1175
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1211
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:367
+msgid "Text Color"
+msgstr "Textfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:872
+msgid "Required Mark Color"
+msgstr "'Erforderlich'-Zeichenfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:893
+msgid "Label position"
+msgstr "Beschriftungsposition"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:896
+msgid "Inline"
+msgstr "Inline"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:907
+msgid "Field"
+msgstr "Feld"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:915
+msgid "Input Color"
+msgstr "Eingabefarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:950
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1145
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1230
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1190
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1226
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1000
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1186
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1436
+msgid "Border Radius"
+msgstr "Randradius"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1018
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1092
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:956
+msgid "Margin"
+msgstr "Margin"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1106
+msgid "Button"
+msgstr "Button"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1116
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1168
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1277
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:419
+msgid "Normal"
+msgstr "Normal"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1160
+msgid "Border"
+msgstr "Rand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1198
+msgid "Text Padding"
+msgstr "Text-Padding"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1212
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1204
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1316
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:440
+msgid "Hover"
+msgstr "Hover"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1255
+msgid "Animation"
+msgstr "Animation"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1292
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1587
+msgid " (Current page)"
+msgstr " (aktuelle Seite)"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1394
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/partials/editor-content.php:83
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+"Meinen Namen, E-Mail und Website in diesem Browser speichern, bis ich wieder "
+"kommentiere."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/WidgetCommentForm.php:1530
+msgid "Comment Submission Failure"
+msgstr "Kommentarübertragungsfehler"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/partials/editor-content.php:27
+msgid "Comments are disabled!"
+msgstr "Kommentare sind deaktiviert!"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentForm/partials/editor-content.php:28
+msgid "This form will not be displayed on Frontend."
+msgstr "Dieses Formular wird im Frontend nicht angezeigt."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/Lib/Walker.php:84
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">sagt:</span>"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/Lib/Walker.php:90
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/Lib/Walker.php:180
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wartet auf Freischaltung."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/Lib/Walker.php:98
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/Lib/Walker.php:98
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/Lib/Walker.php:176
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:120
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:166
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:904
+msgid "Comments"
+msgstr "Kommentare"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:173
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:284
+msgid "Post"
+msgstr "Beitrag"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:210
+msgid "Allow replies"
+msgstr "Antworten erlauben"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:218
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:321
+msgid "Show avatar"
+msgstr "Avatar anzeigen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:226
+msgid "Avatar size"
+msgstr "Avatar-Größe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:250
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:329
+msgid "Author Structure"
+msgstr "Autorformat"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:253
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:332
+#, php-format
+msgid "%s: Placeholder for author name."
+msgstr "%s: Platzhalter für den Autorennamen."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:261
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:340
+msgid "Date Structure"
+msgstr "Datumsformat"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:264
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:343
+#, php-format
+msgid "%1$s: Placeholder for date"
+msgstr "%1$s Platzhalterzeichen für das Datum"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:264
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:343
+#, php-format
+msgid "%2$s: Placeholder for time"
+msgstr "%2$s Platzhalterzeichen für die Uhrzeit"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:272
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:351
+msgid "Date Format"
+msgstr "Datumsformat"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:289
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:368
+msgid "Date Format Custom"
+msgstr "Benutzerdefiniertes Datumsformat"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:295
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:374
+msgid ""
+"For a reference on how to format a date, visit the <a href=\"http://php.net/"
+"manual/en/function.date.php#refsect1-function.date-parameters\" target="
+"\"_blank\">php date manual</a>."
+msgstr ""
+"Für einige Beispiele wie das Datum formatiert werden kann, bitte die Seite "
+"<a href=\"http://php.net/manual/de/function.date.php#refsect1-function.date-"
+"parameters\" target=\"_blank\">php date manual</a> besuchen."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:302
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:381
+msgid "Date Time Custom"
+msgstr "Benutzerdefiniertes Uhrzeitformat"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:305
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:384
+msgid ""
+"For a reference on how to format a time, visit the <a href=\"http://php.net/"
+"manual/en/function.date.php#refsect1-function.date-parameters\" target="
+"\"_blank\">php date manual</a>."
+msgstr ""
+"Für einige Beispiele wie das Datum formatiert werden kann, bitte die Seite "
+"<a href=\"http://php.net/manual/de/function.date.php#refsect1-function.date-"
+"parameters\" target=\"_blank\">php date manual</a> besuchen."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:314
+msgid "Reply Format"
+msgstr "Antwortformat"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:395
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:411
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1107
+msgid "Pagination"
+msgstr "Seitennummerierung"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:404
+#, php-format
+msgid ""
+"Please note: pagination is only available once the option <a href=\"%1$s\" "
+"target=\"_blank\">Break comments into pages</a> has been activated."
+msgstr ""
+"Bitte beachten: Die Seitennummerierung ist nur verfügbar, wenn die Option <a "
+"href=\"%1$s\" target=\"_blank\">Kommentare in Seiten umberechen</a> aktiv "
+"ist."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:420
+msgid "Comments per page"
+msgstr "Kommentare pro Seite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:424
+#, php-format
+msgid ""
+"Default number for the \"comments per page\" option is set on <a href=\"%1$s"
+"\" target=\"_blank\">WP Settings > Discussion</a> page"
+msgstr ""
+"Die Standardzahl für die Option \"Kommentare pro Seite\" wird auf der Seite "
+"<a href=\"%1$s\" target=\"_blank\"> WP-Einstellungen> Diskussion </a> "
+"festgelegt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:435
+msgid "Pagination position"
+msgstr "Seitennummerierungsposition"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:439
+msgid "Top and bottom"
+msgstr "Oben und Unten"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:440
+msgid "Top only"
+msgstr "Nur Oben"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:441
+msgid "Bottom only"
+msgstr "Nur Unten"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:452
+msgid "Show all pages"
+msgstr "Alle Seiten anzeigen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:467
+msgid "Start/End size"
+msgstr "Start/End-Größe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:471
+msgid "How many numbers on either the start and the end list edges."
+msgstr "Anzahl der Seitenzahlen am Anfang und Ende der Seitennummerierung."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:483
+msgid "Middle size"
+msgstr "Mittelgröße"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:487
+msgid ""
+"How many numbers to either side of current page, but not including current "
+"page."
+msgstr "Anzahl der Seitenzahlen, links und rechts von der aktuellen Seite."
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:499
+msgid "First/last buttons?"
+msgstr "Erste/Letzte-Buttons anzeigen?"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:514
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:526
+msgid "Previous"
+msgstr "Vorherige"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:594
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:689
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:785
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:882
+msgid "Full"
+msgstr "Ausgefüllt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:595
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:690
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:786
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:883
+msgid "Framed"
+msgstr "Eingerahmt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:609
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:621
+msgid "Next"
+msgstr "Nächste"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:704
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:717
+msgid "First"
+msgstr "Erste"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:800
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:814
+msgid "Last"
+msgstr "Letzte"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:978
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1115
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1393
+msgid "Padding"
+msgstr "Padding"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1011
+msgid "Comment Header"
+msgstr "Kommentarkopf"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1019
+msgid "Break Author and Date-Time"
+msgstr "Den Autor und das Datum auf unterschiedlichen Zeilen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1055
+msgid "Author Padding"
+msgstr "Autor-Padding"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1092
+msgid "Date-Time Padding"
+msgstr "Datum-Uhrzeit-Padding"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1238
+msgid "Button Transition Duration"
+msgstr "Button Animationsdauer"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1284
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1323
+msgid "Primary Color"
+msgstr "Hauptfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1301
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1336
+msgid "Secondary Color"
+msgstr "Zweitfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1349
+msgid "Transition Duration"
+msgstr "Animationsdauer"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1410
+msgid "Rotate"
+msgstr "Drehen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/CommentList/WidgetCommentList.php:1670
+msgid "No comments available!"
+msgstr "Keine Kommentare!"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:90
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:156
+msgid "Imprint"
+msgstr "Impressum"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:163
+msgid "Element"
+msgstr "Element"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:166
+msgid "H1"
+msgstr "H1"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:167
+msgid "H2"
+msgstr "H2"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:168
+msgid "H3"
+msgstr "H3"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:169
+msgid "H4"
+msgstr "H4"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:170
+msgid "H5"
+msgstr "H5"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:171
+msgid "H6"
+msgstr "H6"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:172
+msgid "div"
+msgstr "div"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:173
+msgid "span"
+msgstr "span"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:174
+msgid "p"
+msgstr "p"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:348
+msgid "Headlines Color"
+msgstr "Titelfarbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:410
+msgid "Links"
+msgstr "Links"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:446
+msgid "Link Color Hover"
+msgstr "Link-Hover-Farbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/Imprint/WidgetImprint.php:461
+msgid "Speed (ms)"
+msgstr "Geschwindigkeit in ms"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:79
+msgid "Post type archive"
+msgstr "Post type archive"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:134
+msgid "Archive settings"
+msgstr "Archiveinstellungen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:141
+msgid "Post type"
+msgstr "Posttyp"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:154
+msgid "Image Size"
+msgstr "Bildgröße"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:162
+msgid "Number of results"
+msgstr "Anzahl der Ergebnisse"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:171
+msgid "Per row"
+msgstr "Pro Zeile"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:184
+msgid "Horizontal spacing"
+msgstr "Horizontaler Abstand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:207
+msgid "Vertical spacing"
+msgstr "Vertikaler Abstand"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:230
+msgid "Effect"
+msgstr "Effekt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:234
+msgid "Grayscale"
+msgstr "Graustufen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:242
+msgid "Slide color"
+msgstr "Slide-Farbe"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:257
+msgid "Transition"
+msgstr "Übergang"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:314
+msgid "Divider"
+msgstr "Trenner"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:322
+msgid "Style"
+msgstr "Style"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:326
+msgid "Solid"
+msgstr "Durchgezogen"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:327
+msgid "Dashed"
+msgstr "Gestrichelt"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:328
+msgid "Dotted"
+msgstr "Gepunktet"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:339
+msgid "Width"
+msgstr "Breite"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:394
+msgid "More link"
+msgstr "Mehr-Link"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:443
+msgid "Filter"
+msgstr "Filter"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:454
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: RtoGit/elebee-core/src/Elementor/Widgets/PostTypeArchive/WidgetPostTypeArchive.php:484
+msgid "Term"
+msgstr "Begriff"
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:77
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:78
+msgid "Global CSS"
+msgstr "Globales CSS"
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:276
+msgid "back"
+msgstr "Zurück"
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:306
+#, php-format
+msgid "Couldn't create CSS file:<br>%s"
+msgstr "Die CSS-Datei konnte nicht erstellt werden:<br>%s"
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:424
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:427
+msgid "Partial updated."
+msgstr "Datei aktualisiert."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:425
+msgid "Custom field updated."
+msgstr "Benutzerdefiniertes Feld aktualisiert."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:426
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertes Feld gelöscht."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:429
+#, php-format
+msgid "Partial restored to revision from %s"
+msgstr "Datei wiederhergestellt aus der Revision %s"
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:430
+msgid "Partial published."
+msgstr "Datei veröffentlicht."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:431
+msgid "Partial saved."
+msgstr "Datei gespeichert."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:432
+msgid "Partial submitted."
+msgstr "Datei übermittelt."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:434
+#, php-format
+msgid "Partial scheduled for: <strong>%1$s</strong>."
+msgstr "Date geplant für den <strong>%1$s</strong>."
+
+#: RtoGit/elebee-core/src/Lib/CustomPostType/CustomCss/CustomCss.php:438
+msgid "Partial draft updated."
+msgstr "Dateientwurf aktualisiert."
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:235
+msgid "[coredata]address[/coredata]"
+msgstr "[coredata]address[/coredata]"
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:249
+msgid "[coredata]email[/coredata]"
+msgstr "[coredata]email[/coredata]"
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:263
+msgid "[coredata]phone[/coredata]"
+msgstr "[coredata]phone[/coredata]"
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:268
+msgid ""
+"You can use the [coredata]key[/coredata] shortcode to display the core data "
+"field inside a post."
+msgstr ""
+"Die Stammdaten können mit dem Shorcode [coredata]key[/coredata] an beliebige "
+"Stelle im Beitrag angezeigt werden."
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:270
+msgid "Core data"
+msgstr "Stammdaten"
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:319
+msgid "Analytics"
+msgstr "Analytics"
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:320
+msgid ""
+"After entering the tracking ID, the Google Analytics Script is automatically "
+"included."
+msgstr ""
+"Bitte die Tracking-ID hinzufügen, um den Google Analytics Script automatisch "
+"einzubinden."
+
+#: RtoGit/elebee-core/src/Lib/Elebee.php:327
+msgid "Google"
+msgstr "Google"
+
+#: RtoGit/elebee-core/src/Lib/MetaBox/partials/meta-key-media-default.php:10
+msgid "Click the image to edit or update"
+msgstr "Zum Bearbeiten oder Aktualisieren, auf das Bild klicken"
+
+#: RtoGit/elebee-core/src/Lib/ThemeSupport/ThemeSupportFeaturedImage.php:77
+msgid "Featured Image"
+msgstr "Beitragsbild"
+
+#~ msgid "Write a Reply or Comment"
+#~ msgstr "Eine Antwort oder Kommentar schreiben"
+
+#~ msgid "Type your comment title here"
+#~ msgstr "Dein Kommentartitel"
+
+#~ msgid "Title Alignment"
+#~ msgstr "Titelausrichtung"
+
+#~ msgid "Type your login prompt here"
+#~ msgstr "Gebe hier die Anmeldeaufforderung ein"
+
+#~ msgid "Type your logged in as text here"
+#~ msgstr "Gebe hier den 'Angemeldet als'-Text ein"
+
+#~ msgid "Alignment Log in/out"
+#~ msgstr "Ausrichtung von Anmelden/Abmelden"
+
+#~ msgid "Send Button Text"
+#~ msgstr "Sendebuttontext"
+
+#~ msgid "Type your send button text here"
+#~ msgstr "Gebe den Sendebutontext ein"
+
+#~ msgid "Alignment Button"
+#~ msgstr "Button Ausrichtung"
+
+#~ msgid "Columns Gap"
+#~ msgstr "Spaltenabstand"
+
+#~ msgid "Log in/out Text Color"
+#~ msgstr "Anmelden/Abmelden-Textfarbe"
+
+#~ msgid "Link Color"
+#~ msgstr "Link-Farbe"
+
+#~ msgid "Hover Color"
+#~ msgstr "Hover-Farbe"
+
+#~ msgid "Website"
+#~ msgstr "Webseite"
+
+#~ msgid ""
+#~ " <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this "
+#~ "account\">"
+#~ msgstr " <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Abmelden\">"
+
+#~ msgid "<a href=\"%s\">"
+#~ msgstr "<a href=\"%s\">"
+
+#~ msgid "Your email address will not be published."
+#~ msgstr "Deine E-Mail-Adresse wird nicht veröffentlicht."
+
+#~ msgid "Comment format"
+#~ msgstr "Kommentarformat"
+
+#~ msgid "Next label"
+#~ msgstr "Nächste-Label"
+
+#~ msgid "HTML Tag"
+#~ msgstr "HTML Tag"
+
+#~ msgid "Title Color"
+#~ msgstr "Titelfarbe"
+
+#~ msgid "H-Tag Color"
+#~ msgstr "H-Tag-Farbe"
+
+#~ msgid "Better Image Gallery"
+#~ msgstr "Better Image Gallery"
+
+#, fuzzy
+#~| msgid "Address"
+#~ msgid "Wordpress"
+#~ msgstr "Adresse"
+
+#, fuzzy
+#~| msgid "Custom Ratio"
+#~ msgid "Custom Caption"
+#~ msgstr "Benutzerdefiniertes Verhältnis"
+
+#, fuzzy
+#~| msgid "Default"
+#~ msgid "Default caption"
+#~ msgstr "Standard"
+
+#, fuzzy
+#~| msgid "Type your send button text here"
+#~ msgid "Type your caption text here"
+#~ msgstr "Gebe den Sendebutontext ein"
+
+#, fuzzy
+#~| msgid "Custom Icon"
+#~ msgid "Customer ID"
+#~ msgstr "Benutzerdefeniertes Icon"
+
+#, fuzzy
+#~| msgid "Title"
+#~ msgid "Titles"
+#~ msgstr "Titel"
+
+#, fuzzy
+#~| msgid "Title"
+#~ msgid "Show Title"
+#~ msgstr "Titel"
+
+#, fuzzy
+#~| msgid "Margin"
+#~ msgid "Title Margin"
+#~ msgstr "Margin"
+
+#, fuzzy
+#~| msgid "First label"
+#~ msgid "First Gallery"
+#~ msgstr "Erste-Label"
+
+#, fuzzy
+#~| msgid "Columns Gap"
+#~ msgid "Columns"
+#~ msgstr "Spaltenabstand"
+
+#, fuzzy
+#~| msgid "Link Color"
+#~ msgid "Link to"
+#~ msgstr "Link-Farbe"
+
+#, fuzzy
+#~| msgid "Right"
+#~ msgid "Lightbox"
+#~ msgstr "Rechts"
+
+#, fuzzy
+#~| msgid "Image Size"
+#~ msgid "Images"
+#~ msgstr "Bildgröße"
+
+#, fuzzy
+#~| msgid "Aspect Ratio"
+#~ msgid "Image Aspect Ratio"
+#~ msgstr "Seitenverhältnis"
+
+#, fuzzy
+#~| msgid "Spacing"
+#~ msgid "Image Spacing"
+#~ msgstr "Abstand"
+
+#, fuzzy
+#~| msgid "Border"
+#~ msgid "Image Border"
+#~ msgstr "Rand"
+
+#, fuzzy
+#~| msgid "Show avatar"
+#~ msgid "Show Sedcard"
+#~ msgstr "Avatar anzeigen"
+
+#, fuzzy
+#~| msgid "Text Color"
+#~ msgid "Key Color"
+#~ msgstr "Textfarbe"
+
+#, fuzzy
+#~| msgid "Typography"
+#~ msgid "Typography Key"
+#~ msgstr "Typografie"
+
+#, fuzzy
+#~| msgid "Typography"
+#~ msgid "Typography Value"
+#~ msgstr "Typografie"
+
+#, fuzzy
+#~| msgid "Title Color"
+#~ msgid "Table Color"
+#~ msgstr "Titelfarbe"
+
+#, fuzzy
+#~| msgid "Color"
+#~ msgid "Odd Color"
+#~ msgstr "Farbe"
+
+#, fuzzy
+#~| msgid "Hover Color"
+#~ msgid "Even Color"
+#~ msgstr "Hover-Farbe"
+
+#, fuzzy
+#~| msgid "Icon Margin"
+#~ msgid "Sedcard Margin"
+#~ msgstr "Icon-Margin"
+
+#, fuzzy
+#~| msgid "Border"
+#~ msgid "Table Border"
+#~ msgstr "Rand"
+
+#, fuzzy
+#~| msgid "Icon Alignment"
+#~ msgid "Icon Align"
+#~ msgstr "Icon-Ausrichtung"
+
+#, fuzzy
+#~| msgid "Icons size"
+#~ msgid "Icon Justify"
+#~ msgstr "Icongröße"
+
+#, fuzzy
+#~| msgid "Button"
+#~ msgid "Back button"
+#~ msgstr "Button"
+
+#, fuzzy
+#~| msgid "Send Button Text"
+#~ msgid "Button Text"
+#~ msgstr "Sendebuttontext"
+
+#, fuzzy
+#~| msgid "Icon Margin"
+#~ msgid "Button Margin"
+#~ msgstr "Icon-Margin"
+
+#, fuzzy
+#~| msgid "Text Padding"
+#~ msgid "Caption Padding"
+#~ msgstr "Text-Padding"

@@ -2,12 +2,12 @@
   "minimum-stability": "dev",
   "repositories": [
     {
-      "type": "git",
-      "url": "https://github.com/RTO-Websites/elebee-core.git"
+      "type": "path",
+      "url": "D:/RtoGit/elebee-core"
     }
   ],
   "require": {
-    "rto-websites/elebee-core": "^0.5.1"
+    "rto-websites/elebee-core": "*"
   },
   "autoload": {
     "psr-4": {
