@@ -7,7 +7,7 @@
     }
   ],
   "require": {
-    "rto-websites/elebee-core": "^0.5.1"
+    "rto-websites/elebee-core": "*"
   },
   "autoload": {
     "psr-4": {
