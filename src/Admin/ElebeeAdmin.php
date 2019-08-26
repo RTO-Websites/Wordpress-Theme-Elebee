@@ -188,9 +188,7 @@ class ElebeeAdmin {
      * @return void
      */
     public function renderAdminPage() {
-
-        ( new Template( dirname( __DIR__ ) . '/admin/partials/settings.php' ) )->render();
-
+        ( new Template( dirname( __DIR__ ) . '/Admin/partials/settings.php' ) )->render();
     }
 
 }
