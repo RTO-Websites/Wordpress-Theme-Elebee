@@ -14,12 +14,15 @@ namespace ElebeeCore\Lib;
 
 
 use ElebeeCore\Admin\ElebeeAdmin;
+use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
+use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
 use ElebeeCore\Elementor\ElebeeElementor;
 use ElebeeCore\Lib\CustomPostType\CustomCss\CustomCss;
 use ElebeeCore\Lib\PostTypeSupport\PostTypeSupportExcerpt;
+use ElebeeCore\Lib\ThemeCustomizer\Panel;
 use ElebeeCore\Lib\ThemeCustomizer\Section;
 use ElebeeCore\Lib\ThemeCustomizer\Setting;
-use ElebeeCore\Lib\ThemeCustomizer\ThemeCustommizer;
+use ElebeeCore\Lib\ThemeCustomizer\ThemeCustomizer;
 use ElebeeCore\Lib\ThemeSupport\ThemeSupportCustomLogo;
 use ElebeeCore\Lib\ThemeSupport\ThemeSupportFeaturedImage;
 use ElebeeCore\Lib\ThemeSupport\ThemeSupportHTML5;
@@ -64,7 +67,7 @@ class Elebee {
 
     /**
      * @since 0.2.0
-     * @var ThemeCustommizer
+     * @var ThemeCustomizer
      */
     private $themeCustomizer;
 
@@ -106,9 +109,9 @@ class Elebee {
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
      *
+     * @return void
      * @since    0.1.0
      *
-     * @return void
      */
     private function loadDependencies() {
 
@@ -122,9 +125,9 @@ class Elebee {
      * Uses the ElebeeI18n class in order to set the domain and to register the hook
      * with WordPress.
      *
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     private function setLocale() {
 
@@ -135,9 +138,9 @@ class Elebee {
     }
 
     /**
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     private function setupThemeSupport() {
 
@@ -162,22 +165,23 @@ class Elebee {
     }
 
     /**
+     * @return void
      * @since 0.2.0
      *
-     * @return void
      */
     public function setupThemeCustomizer() {
 
-        $this->themeCustomizer = new ThemeCustommizer();
+        $this->themeCustomizer = new ThemeCustomizer();
         $this->setupThemeSettingsCoreData();
+        $this->setupThemeSettingsGoogle();
         $this->themeCustomizer->register();
 
     }
 
     /**
+     * @return void
      * @since 0.2.0
      *
-     * @return void
      */
     public function setupThemeSettingsCoreData() {
 
@@ -189,7 +193,7 @@ class Elebee {
             ],
             [
                 'label' => __( 'Address', 'elebee' ),
-                'description' => __( '[coredata]address[/coredata]', 'elebee' ),
+                'description' => '[coredata]address[/coredata]', 'elebee',
                 'type' => 'textarea',
             ]
         );
@@ -202,7 +206,7 @@ class Elebee {
             ],
             [
                 'label' => __( 'E-Mail address', 'elebee' ),
-                'description' => __( '[coredata]email[/coredata]', 'elebee' ),
+                'description' => '[coredata]email[/coredata]',
                 'type' => 'text',
             ]
         );
@@ -215,7 +219,7 @@ class Elebee {
             ],
             [
                 'label' => __( 'Phone', 'elebee' ),
-                'description' => __( '[coredata]phone[/coredata]', 'elebee' ),
+                'description' => '[coredata]phone[/coredata]',
                 'type' => 'text',
             ]
         );
@@ -235,12 +239,66 @@ class Elebee {
     }
 
     /**
+     *
+     */
+    function setupThemeSettingsGoogle() {
+
+        $settingGoogleAnalyticsTrackingId = new SettingTrackingId();
+        $themeCustomizerSettingGoogleAnalyticsTrackingId = new Setting(
+            $settingGoogleAnalyticsTrackingId->getName(),
+            [
+                'type' => 'option',
+            ],
+            [
+                'label' => $settingGoogleAnalyticsTrackingId->getTitle(),
+                'type' => 'text',
+                'input_attrs' => [
+                    'placeholder' => 'UA-XXXXX-X',
+                ],
+            ]
+        );
+
+        $settingGoogleAnalyticsAnonymizeIp = new SettingAnonymizeIp();
+        $themeCustomizerSettingGoogleAnalyticsAnonymizeIp = new Setting(
+            $settingGoogleAnalyticsAnonymizeIp->getName(),
+            [
+                'type' => 'option',
+                'default' => $settingGoogleAnalyticsAnonymizeIp->getDefault(),
+            ],
+            [
+                'label' => $settingGoogleAnalyticsAnonymizeIp->getTitle(),
+                'type' => 'checkbox',
+                'input_attrs' => [
+                    'checked' => true,
+                ],
+            ]
+        );
+
+        $sectionGoogleAnalytics = new Section( 'elebee_google_analytics_section', [
+            'title' => __( 'Analytics', 'elebee' ),
+            'description' => __( 'After entering the tracking ID, the Google Analytics Script is automatically included.', 'elebee' ),
+        ] );
+        $sectionGoogleAnalytics->addSetting( $themeCustomizerSettingGoogleAnalyticsTrackingId );
+        $sectionGoogleAnalytics->addSetting( $themeCustomizerSettingGoogleAnalyticsAnonymizeIp );
+
+        $panelGoogle = new Panel( 'elebee_google_panel', [
+            'priority' => 800,
+            'title' => __( 'Google', 'elebee' ),
+            'description' => '',
+        ] );
+        $panelGoogle->addSection( $sectionGoogleAnalytics );
+
+        $this->themeCustomizer->addElement( $panelGoogle );
+
+    }
+
+    /**
      * Register all of the hooks related to the admin area functionality
      * of the theme.
      *
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     private function defineAdminHooks() {
 
@@ -256,8 +314,7 @@ class Elebee {
 
         if ( class_exists( 'Elementor\Settings' ) ) {
             $this->loader->addAction( 'admin_menu', $elebeeAdmin, 'addMenuPage', Settings::MENU_PRIORITY_GO_PRO + 1 );
-        }
-        else {
+        } else {
             $this->loader->addAction( 'admin_notices', $elebeeAdmin, 'elementorNotExists' );
         }
 
@@ -277,9 +334,9 @@ class Elebee {
      * Register all of the hooks related to the public-facing functionality
      * of the theme.
      *
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     private function definePublicHooks() {
 
@@ -289,15 +346,16 @@ class Elebee {
 
         $elebeePublic = new ElebeePublic( $this->getThemeName(), $this->getVersion() );
 
-        $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueStyles' );
+        $this->loader->addAction( 'wp_head', $elebeePublic, 'embedGoogleAnalytics', 0 );
+        $this->loader->addAction( 'wp_enqueue_styles', $elebeePublic, 'enqueueStyles' );
         $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueScripts' );
 
     }
 
     /**
+     * @return void
      * @since 0.3.2
      *
-     * @return void
      */
     private function defineElementorHooks() {
 
@@ -307,9 +365,9 @@ class Elebee {
      * The name of the theme used to uniquely identify it within the context of
      * WordPress and to define internationalization functionality.
      *
+     * @return string The name of the theme.
      * @since 0.1.0
      *
-     * @return string The name of the theme.
      */
     public function getThemeName() {
 
@@ -319,9 +377,9 @@ class Elebee {
     /**
      * The reference to the class that orchestrates the hooks with the theme.
      *
+     * @return ElebeeLoader Orchestrates the hooks of the theme.
      * @since 0.1.0
      *
-     * @return ElebeeLoader Orchestrates the hooks of the theme.
      */
     public function getLoader() {
 
@@ -332,9 +390,9 @@ class Elebee {
     /**
      * Retrieve the version number of the theme.
      *
+     * @return string The version number of the theme.
      * @since 0.1.0
      *
-     * @return string The version number of the theme.
      */
     public function getVersion() {
 
@@ -343,14 +401,14 @@ class Elebee {
     }
 
     /**
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     public function phpVersionFail() {
 
         $message = esc_html__( 'The Elementor RTO plugin requires PHP version 7.0+, plugin is currently NOT ACTIVE.', 'elebee' );
-        $errorTemplate = new Template( dirname( __DIR__ ) . '/public/partials/general/element-default.php', [
+        $errorTemplate = new Template( __DIR__ . '/partials/element-default.php', [
             'tag' => 'div',
             'attributes' => 'class="error"',
             'content' => wpautop( $message ),
@@ -362,9 +420,9 @@ class Elebee {
     /**
      * Run the loader to execute all of the hooks with WordPress.
      *
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     public static function run() {
 
