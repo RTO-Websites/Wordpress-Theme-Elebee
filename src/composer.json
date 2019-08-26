@@ -6,13 +6,10 @@
       "url": "https://github.com/RTO-Websites/elebee-core.git"
     }
   ],
-  "require": {
-    "rto-websites/elebee-core": "*"
-  },
   "autoload": {
     "psr-4": {
-      "Elebee\\": "",
-      "Elebee\\Pub\\": "Public/"
+      "ElebeeCore\\": "",
+      "ElebeeCore\\Pub\\": "Public/"
     }
   }
 }
