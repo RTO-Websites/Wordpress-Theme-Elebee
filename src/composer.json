@@ -1,11 +1,5 @@
 {
   "minimum-stability": "dev",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/RTO-Websites/elebee-core.git"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "ElebeeCore\\": "",

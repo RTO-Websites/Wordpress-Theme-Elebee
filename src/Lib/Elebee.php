@@ -45,15 +45,6 @@ use Elementor\Settings;
  * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/Elebee.html
  */
 class Elebee {
-
-    /**
-     * The current version of the theme.
-     *
-     * @since 0.1.0
-     * @var string The current version of the theme.
-     */
-    const VERSION = '0.7.1';
-
     /**
      * The loader that's responsible for maintaining and registering all hooks that power
      * the theme.
@@ -347,7 +338,7 @@ class Elebee {
      */
     public function getVersion() {
 
-        return self::VERSION;
+        return Elebee_VERISON;
 
     }
 
