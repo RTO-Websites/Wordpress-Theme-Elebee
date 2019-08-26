@@ -14,6 +14,9 @@ namespace ElebeeCore\Lib;
 
 
 use ElebeeCore\Admin\ElebeeAdmin;
+use ElebeeCore\Admin\Setting\CoreData\SettingAddress;
+use ElebeeCore\Admin\Setting\CoreData\SettingEmail;
+use ElebeeCore\Admin\Setting\CoreData\SettingPhone;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
 use ElebeeCore\Elementor\ElebeeElementor;
@@ -179,47 +182,50 @@ class Elebee {
     }
 
     /**
-     * @return void
      * @since 0.2.0
      *
+     * @return void
      */
     public function setupThemeSettingsCoreData() {
 
-        $settingCoreDataAddress = new Setting(
-            'elebee_core_data_address',
+        $settingCoreDataAddress = new SettingAddress();
+        $themeCustomizerSettingCoreDataAddress = new Setting(
+            $settingCoreDataAddress->getName(),
             [
                 'type' => 'option',
                 'default' => '',
             ],
             [
-                'label' => __( 'Address', 'elebee' ),
-                'description' => '[coredata]address[/coredata]', 'elebee',
+                'label' => $settingCoreDataAddress->getTitle(),
+                'description' => __( '[coredata]address[/coredata]', 'elebee' ),
                 'type' => 'textarea',
             ]
         );
 
-        $settingCoreDataEmail = new Setting(
-            'elebee_core_data_email',
+        $settingCoreDataEmail = new SettingEmail();
+        $themeCustomizerSettingCoreDataEmail = new Setting(
+            $settingCoreDataEmail->getName(),
             [
                 'type' => 'option',
                 'default' => '',
             ],
             [
-                'label' => __( 'E-Mail address', 'elebee' ),
-                'description' => '[coredata]email[/coredata]',
+                'label' => $settingCoreDataEmail->getTitle(),
+                'description' => __( '[coredata]email[/coredata]', 'elebee' ),
                 'type' => 'text',
             ]
         );
 
-        $settingCoreDataPhone = new Setting(
-            'elebee_core_data_phone',
+        $settingCoreDataDataPhone = new SettingPhone();
+        $themeCustomizerSettingCoreDataPhone = new Setting(
+            $settingCoreDataDataPhone->getName(),
             [
                 'type' => 'option',
                 'default' => '',
             ],
             [
-                'label' => __( 'Phone', 'elebee' ),
-                'description' => '[coredata]phone[/coredata]',
+                'label' => $settingCoreDataDataPhone->getTitle(),
+                'description' => __( '[coredata]phone[/coredata]', 'elebee' ),
                 'type' => 'text',
             ]
         );
@@ -230,11 +236,11 @@ class Elebee {
             'priority' => 700,
             'description' => $description,
         ] );
-        $sectionCoreData->addSetting( $settingCoreDataAddress );
-        $sectionCoreData->addSetting( $settingCoreDataEmail );
-        $sectionCoreData->addSetting( $settingCoreDataPhone );
+        $sectionCoreData->addSetting( $themeCustomizerSettingCoreDataAddress );
+        $sectionCoreData->addSetting( $themeCustomizerSettingCoreDataEmail );
+        $sectionCoreData->addSetting( $themeCustomizerSettingCoreDataPhone );
 
-        $this->themeCustomizer->addSection( $sectionCoreData );
+        $this->themeCustomizer->addElement( $sectionCoreData );
 
     }
 

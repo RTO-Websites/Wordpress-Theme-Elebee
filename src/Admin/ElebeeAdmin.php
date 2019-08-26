@@ -16,7 +16,7 @@ namespace ElebeeCore\Admin;
 
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
-use ElebeeCore\Admin\Setting\JQuery\SettingJQuery;
+use ElebeeCore\Admin\Setting\SettingJQuery;
 use ElebeeCore\Admin\Setting\SettingIsExclusive;
 use ElebeeCore\Lib\Util\AdminNotice\AdminNotice;
 use ElebeeCore\Lib\Util\Template;
@@ -141,10 +141,8 @@ class ElebeeAdmin {
      */
     public function settingsApiInit() {
 
-
         $settingIsExclusive = new SettingIsExclusive();
         $settingIsExclusive->register( 'elebee_settings' );
-
         $settingJQuery = new SettingJQuery();
         $settingJQuery->register( 'elebee_settings' );
 

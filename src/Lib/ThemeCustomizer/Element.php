@@ -1,14 +1,14 @@
 <?php
 
 /**
- * ThemeCustomizerElement.php
+ * ThemeCustommizerElement.php
  *
  * @since   0.2.0
  *
  * @package ElebeeCore\Lib\ThemeCustomizer
  * @author  RTO GmbH <info@rto.de>
  * @licence GPL-3.0
- * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustomizerElement.html
+ * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustommizerElement.html
  */
 
 namespace ElebeeCore\Lib\ThemeCustomizer;
@@ -17,14 +17,14 @@ namespace ElebeeCore\Lib\ThemeCustomizer;
 \defined( 'ABSPATH' ) || exit;
 
 /**
- * Class ThemeCustomizerElement
+ * Class ThemeCustommizerElement
  *
  * @since   0.2.0
  *
  * @package ElebeeCore\Lib\ThemeCustomizer
  * @author  RTO GmbH <info@rto.de>
  * @licence GPL-3.0
- * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustomizerElement.html
+ * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustommizerElement.html
  */
 abstract class Element {
 
@@ -41,7 +41,7 @@ abstract class Element {
     private $args;
 
     /**
-     * ThemeCustomizerElement constructor.
+     * ThemeCustommizerElement constructor.
      *
      * @since 0.2.0
      *

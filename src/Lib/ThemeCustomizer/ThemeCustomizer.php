@@ -1,14 +1,14 @@
 <?php
 
 /**
- * ThemeCustomizer.php
+ * ThemeCustommizer.php
  *
  * @since   0.2.0
  *
  * @package ElebeeCore\Lib\ThemeCustomizer
  * @author  RTO GmbH <info@rto.de>
  * @licence GPL-3.0
- * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustomizer.html
+ * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustommizer.html
  */
 
 namespace ElebeeCore\Lib\ThemeCustomizer;
@@ -24,7 +24,7 @@ namespace ElebeeCore\Lib\ThemeCustomizer;
  * @package ElebeeCore\Lib\ThemeCustomizer
  * @author  RTO GmbH <info@rto.de>
  * @licence GPL-3.0
- * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustomizer.html
+ * @link    https://rto-websites.github.io/elebee-core-api/master/ElebeeCore/Lib/ThemeCustomizer/ThemeCustommizer.html
  */
 class ThemeCustomizer {
 
@@ -35,7 +35,7 @@ class ThemeCustomizer {
     private $elementList;
 
     /**
-     * ThemeCustomizer constructor.
+     * ThemeCustommizer constructor.
      *
      * @since 0.2.0
      */
