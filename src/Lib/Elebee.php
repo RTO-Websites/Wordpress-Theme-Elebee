@@ -89,6 +89,7 @@ class Elebee {
 
         $this->loadDependencies();
         $this->setLocale();
+        $this->setupPostTypeSupport();
         $this->setupThemeSupport();
         $this->setupThemeCustomizer();
         $this->defineAdminHooks();
@@ -137,6 +138,18 @@ class Elebee {
         $elebeeI18n = new ElebeeI18n();
         $elebeeI18n->setDomain( $this->getThemeName() );
         $elebeeI18n->loadThemeTEXTDOMAIN();
+
+    }
+
+    /**
+     * @since 0.2.0
+     *
+     * @return void
+     */
+    private function setupPostTypeSupport() {
+
+        $themeSupportExcerpt = new PostTypeSupportExcerpt();
+        $themeSupportExcerpt->addPostTypeSupport();
 
     }
 
