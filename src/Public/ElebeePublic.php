@@ -15,7 +15,7 @@ namespace ElebeeCore\Pub;
 
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
-use ElebeeCore\Admin\Setting\JQuery\SettingJQuery;
+use ElebeeCore\Admin\Setting\SettingJQuery;
 use ElebeeCore\Lib\Util\Template;
 
 \defined( 'ABSPATH' ) || exit;
