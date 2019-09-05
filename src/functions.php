@@ -6,10 +6,16 @@
  */
 require_once( 'vendor/autoload.php' );
 
-if( ! defined( 'TEXTDOMAIN' ) ) {
+if ( !defined( 'TEXTDOMAIN' ) ) {
 
     define( 'TEXTDOMAIN', 'elebee' );
 
 }
+
+define( 'Elebee_VERISON', '1.0.0' );
+
+define( 'Elebee_URL', get_stylesheet_directory_uri() );
+define( 'Elebee_DIR', str_replace( '\\', '/', __DIR__ ) );
+
 
 \ElebeeCore\Lib\Elebee::run();
