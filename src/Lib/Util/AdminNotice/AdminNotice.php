@@ -37,7 +37,7 @@ class AdminNotice {
 
     public function __construct() {
 
-        $this->assetsUrl = untrailingslashit( Elebee_URL ) . '/vendor/rto-websites/elebee-core/src/Lib/Util/AdminNotice';
+        $this->assetsUrl = untrailingslashit( Elebee_URL ) . '/Lib/Util/AdminNotice';
 
     }
 
