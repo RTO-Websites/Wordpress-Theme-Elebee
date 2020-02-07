@@ -101,10 +101,10 @@ class ElebeePublic {
         }
 
         if ( file_exists( Elebee_DIR . '/js/vendor.min.js')) {
-            wp_enqueue_script( $this->themeName . '-vendor', Elebee_URL . '/js/vendor.min.js', [ 'jquery' ], $this->version, true );
+            wp_enqueue_script( $this->themeName . '-elebee-vendor', Elebee_URL . '/js/vendor.min.js', [ 'jquery' ], $this->version, true );
         }
-        wp_enqueue_script( $this->themeName . '-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
-        wp_localize_script( $this->themeName . '-main', 'themeVars', [
+        wp_enqueue_script( $this->themeName . '-elebee-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
+        wp_localize_script( $this->themeName . '-elebee-main', 'themeVars', [
             'websiteName' => get_bloginfo( 'name' ),
             'websiteUrl' => esc_url( get_site_url() ),
             'themeUrl' => esc_url( Elebee_URL ),
