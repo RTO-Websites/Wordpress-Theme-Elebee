@@ -83,7 +83,7 @@ class Elebee {
         $this->themeName = 'elebee';
 
         $this->loadDependencies();
-        $this->setLocale();
+        #$this->setLocale(); -> Comment in if we have translations
         $this->setupPostTypeSupport();
         $this->setupThemeSupport();
         $this->setupThemeCustomizer();
@@ -177,6 +177,9 @@ class Elebee {
      *
      */
     public function setupThemeCustomizer() {
+        if ( !is_customize_preview() ) {
+            return;
+        }
 
         $this->themeCustomizer = new ThemeCustomizer();
         $this->setupThemeSettingsGoogle();
