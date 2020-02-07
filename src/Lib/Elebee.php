@@ -298,6 +298,9 @@ class Elebee {
 
         $this->loader->addAction( 'init', Config::class, 'cleanUpHead' );
         $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
+        $this->loader->addAction( 'script_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
+        $this->loader->addAction( 'style_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
+
         $this->loader->addFilter( 'status_header', Config::class, 'disableRedirectGuess' );
 
         $elebeePublic = new ElebeePublic( $this->getThemeName(), $this->getVersion() );

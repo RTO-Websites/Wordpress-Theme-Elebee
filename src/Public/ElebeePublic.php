@@ -107,7 +107,7 @@ class ElebeePublic {
         // Comment this in if we add some js to the theme
         //wp_enqueue_script( $this->themeName . '-elebee-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
 
-        wp_add_inline_script( 'jquery', 'themeVars = ' . json_encode( [
+        wp_add_inline_script( 'jquery', 'let themeVars = ' . json_encode( [
                 'websiteName' => get_bloginfo( 'name' ),
                 'websiteUrl' => esc_url( get_site_url() ),
                 'themeUrl' => esc_url( Elebee_URL ),
@@ -116,7 +116,7 @@ class ElebeePublic {
                 'isMobile' => number_format( wp_is_mobile() ),
                 'debug' => number_format( WP_DEBUG ),
                 'live' => '<!-- heartbeat alive -->',
-            ] ) . ';' );
+            ] ) . ';', 'before' );
 
         if ( WP_DEBUG ) {
             wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js' );
@@ -144,6 +144,5 @@ class ElebeePublic {
         $ieConditionals = new Template( __DIR__ . '/partials/ie-conditionals.php' );
         $ieConditionals->render();
     }
-
 
 }
