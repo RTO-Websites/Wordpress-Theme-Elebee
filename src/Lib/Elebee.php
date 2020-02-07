@@ -89,6 +89,7 @@ class Elebee {
         $this->setupThemeCustomizer();
         $this->defineAdminHooks();
         $this->definePublicHooks();
+        $this->defineGlobalHooks();
     }
 
     /**
@@ -263,7 +264,6 @@ class Elebee {
         $elebeeAdmin = new ElebeeAdmin( $this->getThemeName(), $this->getVersion() );
 
         $this->loader->addAction( 'admin_init', $elebeeAdmin, 'settingsApiInit' );
-        $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
 
         if ( class_exists( 'Elementor\Settings' ) ) {
             $this->loader->addAction( 'admin_menu', $elebeeAdmin, 'addMenuPage', Settings::MENU_PRIORITY_GO_PRO + 1 );
@@ -297,10 +297,6 @@ class Elebee {
         }
 
         $this->loader->addAction( 'init', Config::class, 'cleanUpHead' );
-        $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
-        $this->loader->addAction( 'script_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
-        $this->loader->addAction( 'style_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
-
         $this->loader->addFilter( 'status_header', Config::class, 'disableRedirectGuess' );
 
         $elebeePublic = new ElebeePublic( $this->getThemeName(), $this->getVersion() );
@@ -310,6 +306,20 @@ class Elebee {
         $this->loader->addAction( 'wp_enqueue_styles', $elebeePublic, 'enqueueStyles' );
         $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueScripts' );
 
+    }
+
+    /**
+     * Register all of the hooks related in both public- and admin-facing functionality
+     * of the theme.
+     *
+     * @return void
+     * @since 1.1.0
+     *
+     */
+    private function defineGlobalHooks() {
+        $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
+        $this->loader->addAction( 'script_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
+        $this->loader->addAction( 'style_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
     }
 
     /**
