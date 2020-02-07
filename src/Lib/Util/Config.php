@@ -61,22 +61,6 @@ class Config {
         remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 
     }
-    /**
-     * @since 0.2.0
-     *
-     * @return void
-     */
-    public static function removeCrapInHtmlAttributes( $content ) {
-
-        $content = str_replace( [
-            " type='text/javascript'", ' type="text/javascript"',
-            " type='text/css'", ' type="text/css"',
-            ' itemprop="url"', ' itemprop="logo"',
-        ], '', $content );
-
-        return $content;
-
-    }
 
     /**
      * @since 0.2.0
@@ -163,4 +147,11 @@ class Config {
 
     }
 
+
+    /**
+     * Improves output of html (like removing type from <script> and <link>
+     */
+    public static function addThemeSupportHtml5() {
+        add_theme_support( 'html5', array( 'script', 'style' ) );
+    }
 }

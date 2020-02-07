@@ -116,7 +116,7 @@ class ElebeePublic {
                 'isMobile' => number_format( wp_is_mobile() ),
                 'debug' => number_format( WP_DEBUG ),
                 'live' => '<!-- heartbeat alive -->',
-            ] ) . ';', 'before' );
+            ] ) . ';', 'after' );
 
         if ( WP_DEBUG ) {
             wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js' );

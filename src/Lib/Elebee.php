@@ -280,7 +280,6 @@ class Elebee {
         $this->loader->addAction( 'admin_enqueue_scripts', $utilAdminNotice, 'enqueueScripts' );
         $this->loader->addAction( 'admin_enqueue_scripts', $utilAdminNotice, 'localizeScripts' );
         $this->loader->addAction( 'wp_ajax_dismiss_notice', $utilAdminNotice, 'dismissNotice' );
-
     }
 
     /**
@@ -318,8 +317,7 @@ class Elebee {
      */
     private function defineGlobalHooks() {
         $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
-        $this->loader->addAction( 'script_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
-        $this->loader->addAction( 'style_loader_tag', Config::class, 'removeCrapInHtmlAttributes' );
+        $this->loader->addAction( 'after_setup_theme', Config::class, 'addThemeSupportHtml5' );
     }
 
     /**
