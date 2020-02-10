@@ -28,10 +28,10 @@ namespace ElebeeCore\Lib\Util;
 class Config {
 
     /**
-     * @since 0.2.0
-     *
      * @param string $header
      * @return string
+     * @since 0.2.0
+     *
      */
     public static function disableRedirectGuess( string $header ): string {
 
@@ -46,9 +46,9 @@ class Config {
     }
 
     /**
+     * @return void
      * @since 0.2.0
      *
-     * @return void
      */
     public static function disableEmojies() {
 
@@ -63,10 +63,10 @@ class Config {
     }
 
     /**
-     * @since 0.2.0
-     *
      * @param $plugins
      * @return array
+     * @since 0.2.0
+     *
      */
     public static function disableTinymceEmojies( $plugins ) {
 
@@ -81,9 +81,9 @@ class Config {
     }
 
     /**
+     * @return void
      * @since 0.2.0
      *
-     * @return void
      */
     public static function cleanUpHead() {
 
@@ -96,17 +96,17 @@ class Config {
         remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
         remove_action( 'wp_head', 'feed_links', 2 );
         remove_action( 'wp_head', 'feed_links_extra', 3 );
-        remove_action( 'wp_head', 'wp_shosrtlink_wp_head', 10 );
+        remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );
         remove_action( 'wp_head', 'wp_shortlink_header', 10 );
 
     }
 
     /**
+     * @param array $settings
+     * @return array
      * @since 0.2.0
      * @deprecated Obsolete since Wordpress 5.0
      *
-     * @param array $settings
-     * @return array
      */
     public static function switchTinymceEnterMode( array $settings ) {
 
@@ -147,4 +147,11 @@ class Config {
 
     }
 
+
+    /**
+     * Improves output of html (like removing type from <script> and <link>
+     */
+    public static function addThemeSupportHtml5() {
+        add_theme_support( 'html5', [ 'script', 'style' ] );
+    }
 }

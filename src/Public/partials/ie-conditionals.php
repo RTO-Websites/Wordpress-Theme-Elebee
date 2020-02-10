@@ -1,5 +1,5 @@
 <!--[if lt IE 9]>
-<script type="text/javascript">
+<script>
     window.location = "http://whatbrowser.org/intl/de/";
 </script>
 <![endif]-->

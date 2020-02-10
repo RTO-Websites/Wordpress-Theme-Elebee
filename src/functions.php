@@ -6,9 +6,9 @@
  */
 require_once( 'vendor/autoload.php' );
 
-if ( !defined( 'TEXTDOMAIN' ) ) {
+if ( !defined( 'Elebee_TEXTDOMAIN' ) ) {
 
-    define( 'TEXTDOMAIN', 'elebee' );
+    define( 'Elebee_TEXTDOMAIN', 'elebee' );
 
 }
 
