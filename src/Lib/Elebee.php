@@ -302,7 +302,7 @@ class Elebee {
 
         $this->loader->addAction( 'wp_head', $elebeePublic, 'embedGoogleAnalytics', 0 );
         $this->loader->addAction( 'wp_head', $elebeePublic, 'embedIEConditionals', 0 );
-        $this->loader->addAction( 'wp_enqueue_styles', $elebeePublic, 'enqueueStyles' );
+        $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueStyles' );
         $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueScripts' );
 
     }

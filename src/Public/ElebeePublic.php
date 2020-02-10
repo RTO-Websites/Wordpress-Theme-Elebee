@@ -76,7 +76,7 @@ class ElebeePublic {
      */
     public function enqueueStyles() {
 
-        wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/css/main.min.css', [], $this->version, 'all' );
+        wp_enqueue_style( $this->themeName . '-main', get_stylesheet_directory_uri() . '/css/main.min.css', [], $this->version, 'all' );
 
     }
 
@@ -109,11 +109,11 @@ class ElebeePublic {
         }
 
         if ( file_exists( Elebee_DIR . '/js/vendor.min.js' ) ) {
-            wp_enqueue_script( $this->themeName . '-elebee-vendor', Elebee_URL . '/js/vendor.min.js', [ 'jquery' ], $this->version, true );
+            wp_enqueue_script( $this->themeName . '-vendor', Elebee_URL . '/js/vendor.min.js', [ 'jquery' ], $this->version, true );
         }
 
         // Comment this in if we add some js to the theme
-        //wp_enqueue_script( $this->themeName . '-elebee-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
+        //wp_enqueue_script( $this->themeName . '-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
 
         wp_add_inline_script( 'jquery', 'let themeVars = ' . json_encode( [
                 'websiteName' => get_bloginfo( 'name' ),
@@ -124,7 +124,7 @@ class ElebeePublic {
                 'isMobile' => number_format( wp_is_mobile() ),
                 'debug' => number_format( WP_DEBUG ),
                 'live' => '<!-- heartbeat alive -->',
-            ] ) . ';', 'after' );
+            ] ) . ';', 'before' );
 
         if ( WP_DEBUG ) {
             wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js' );
