@@ -16,6 +16,7 @@ namespace ElebeeCore\Pub;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
 use ElebeeCore\Admin\Setting\SettingJQuery;
+use ElebeeCore\Admin\Setting\SettingJQueryNoMigrate;
 use ElebeeCore\Lib\Util\Template;
 
 \defined( 'ABSPATH' ) || exit;
@@ -97,7 +98,14 @@ class ElebeePublic {
             case 'latest-local':
                 wp_deregister_script( 'jquery' );
                 wp_register_script( 'jquery', Elebee_URL . '/Public/assets/js/jquery.min.js', [], '3.4.1' );
+                wp_enqueue_script( 'jquery-migrate-301', Elebee_URL . '/Public/assets/js/jquery-migrate-301.min.js', [ 'jquery' ], '3.0.1' );
                 break;
+        }
+
+        $settingJQueryNoMigrate = ( new SettingJQueryNoMigrate() )->getOption();
+        if ( !empty( $settingJQueryNoMigrate ) ) {
+            wp_deregister_script( 'jquery-migrate');
+            wp_deregister_script( 'jquery-migrate-301');
         }
 
         if ( file_exists( Elebee_DIR . '/js/vendor.min.js' ) ) {
