@@ -14,13 +14,8 @@ namespace ElebeeCore\Lib;
 
 
 use ElebeeCore\Admin\ElebeeAdmin;
-use ElebeeCore\Admin\Setting\CoreData\SettingAddress;
-use ElebeeCore\Admin\Setting\CoreData\SettingEmail;
-use ElebeeCore\Admin\Setting\CoreData\SettingPhone;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
-use ElebeeCore\Elementor\ElebeeElementor;
-use ElebeeCore\Lib\CustomPostType\CustomCss\CustomCss;
 use ElebeeCore\Lib\PostTypeSupport\PostTypeSupportExcerpt;
 use ElebeeCore\Lib\ThemeCustomizer\Panel;
 use ElebeeCore\Lib\ThemeCustomizer\Section;
@@ -88,16 +83,13 @@ class Elebee {
         $this->themeName = 'elebee';
 
         $this->loadDependencies();
-        $this->setLocale();
+        #$this->setLocale(); -> Comment in if we have translations
         $this->setupPostTypeSupport();
         $this->setupThemeSupport();
         $this->setupThemeCustomizer();
         $this->defineAdminHooks();
         $this->definePublicHooks();
-        if ( class_exists( 'Elementor\Settings' ) ) {
-            $this->defineElementorHooks();
-        }
-
+        $this->defineGlobalHooks();
     }
 
     /**
@@ -142,9 +134,9 @@ class Elebee {
     }
 
     /**
+     * @return void
      * @since 0.2.0
      *
-     * @return void
      */
     private function setupPostTypeSupport() {
 
@@ -186,74 +178,13 @@ class Elebee {
      *
      */
     public function setupThemeCustomizer() {
+        if ( !is_customize_preview() ) {
+            return;
+        }
 
         $this->themeCustomizer = new ThemeCustomizer();
-        $this->setupThemeSettingsCoreData();
         $this->setupThemeSettingsGoogle();
         $this->themeCustomizer->register();
-
-    }
-
-    /**
-     * @since 0.2.0
-     *
-     * @return void
-     */
-    public function setupThemeSettingsCoreData() {
-
-        $settingCoreDataAddress = new SettingAddress();
-        $themeCustomizerSettingCoreDataAddress = new Setting(
-            $settingCoreDataAddress->getName(),
-            [
-                'type' => 'option',
-                'default' => '',
-            ],
-            [
-                'label' => $settingCoreDataAddress->getTitle(),
-                'description' => __( '[coredata]address[/coredata]', 'elebee' ),
-                'type' => 'textarea',
-            ]
-        );
-
-        $settingCoreDataEmail = new SettingEmail();
-        $themeCustomizerSettingCoreDataEmail = new Setting(
-            $settingCoreDataEmail->getName(),
-            [
-                'type' => 'option',
-                'default' => '',
-            ],
-            [
-                'label' => $settingCoreDataEmail->getTitle(),
-                'description' => __( '[coredata]email[/coredata]', 'elebee' ),
-                'type' => 'text',
-            ]
-        );
-
-        $settingCoreDataDataPhone = new SettingPhone();
-        $themeCustomizerSettingCoreDataPhone = new Setting(
-            $settingCoreDataDataPhone->getName(),
-            [
-                'type' => 'option',
-                'default' => '',
-            ],
-            [
-                'label' => $settingCoreDataDataPhone->getTitle(),
-                'description' => __( '[coredata]phone[/coredata]', 'elebee' ),
-                'type' => 'text',
-            ]
-        );
-
-        $description = __( 'You can use the [coredata]key[/coredata] shortcode to display the core data field inside a post.', 'elebee' );
-        $sectionCoreData = new Section( 'elebee_core_data_section', [
-            'title' => __( 'Core data', 'elebee' ),
-            'priority' => 700,
-            'description' => $description,
-        ] );
-        $sectionCoreData->addSetting( $themeCustomizerSettingCoreDataAddress );
-        $sectionCoreData->addSetting( $themeCustomizerSettingCoreDataEmail );
-        $sectionCoreData->addSetting( $themeCustomizerSettingCoreDataPhone );
-
-        $this->themeCustomizer->addElement( $sectionCoreData );
 
     }
 
@@ -320,6 +251,9 @@ class Elebee {
      *
      */
     private function defineAdminHooks() {
+        if ( !is_admin() && !is_customize_preview() ) {
+            return;
+        }
 
         global $wp_version;
         if ( version_compare( $wp_version, '5.0', '<' ) ) {
@@ -346,7 +280,6 @@ class Elebee {
         $this->loader->addAction( 'admin_enqueue_scripts', $utilAdminNotice, 'enqueueScripts' );
         $this->loader->addAction( 'admin_enqueue_scripts', $utilAdminNotice, 'localizeScripts' );
         $this->loader->addAction( 'wp_ajax_dismiss_notice', $utilAdminNotice, 'dismissNotice' );
-
     }
 
     /**
@@ -358,27 +291,33 @@ class Elebee {
      *
      */
     private function definePublicHooks() {
+        if ( is_admin() && !is_customize_preview() ) {
+            return;
+        }
 
         $this->loader->addAction( 'init', Config::class, 'cleanUpHead' );
-        $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
         $this->loader->addFilter( 'status_header', Config::class, 'disableRedirectGuess' );
 
         $elebeePublic = new ElebeePublic( $this->getThemeName(), $this->getVersion() );
 
         $this->loader->addAction( 'wp_head', $elebeePublic, 'embedGoogleAnalytics', 0 );
         $this->loader->addAction( 'wp_head', $elebeePublic, 'embedIEConditionals', 0 );
-        $this->loader->addAction( 'wp_enqueue_styles', $elebeePublic, 'enqueueStyles' );
+        $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueStyles' );
         $this->loader->addAction( 'wp_enqueue_scripts', $elebeePublic, 'enqueueScripts' );
 
     }
 
     /**
+     * Register all of the hooks related in both public- and admin-facing functionality
+     * of the theme.
+     *
      * @return void
-     * @since 0.3.2
+     * @since 1.1.0
      *
      */
-    private function defineElementorHooks() {
-
+    private function defineGlobalHooks() {
+        $this->loader->addAction( 'init', Config::class, 'disableEmojies' );
+        $this->loader->addAction( 'after_setup_theme', Config::class, 'addThemeSupportHtml5' );
     }
 
     /**

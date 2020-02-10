@@ -16,6 +16,8 @@ namespace ElebeeCore\Pub;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
 use ElebeeCore\Admin\Setting\SettingJQuery;
+use ElebeeCore\Admin\Setting\SettingJQueryNoMigrate;
+use ElebeeCore\Admin\Setting\SettingNoThemeCss;
 use ElebeeCore\Lib\Util\Template;
 
 \defined( 'ABSPATH' ) || exit;
@@ -54,10 +56,10 @@ class ElebeePublic {
     /**
      * Initialize the class and set its properties.
      *
+     * @param string $themeName The name of the theme.
+     * @param string $version The version of this theme.
      * @since 0.1.0
      *
-     * @param string $themeName The name of the theme.
-     * @param string $version   The version of this theme.
      */
     public function __construct( string $themeName, string $version ) {
 
@@ -69,22 +71,26 @@ class ElebeePublic {
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     public function enqueueStyles() {
+        $settingNoThemeCss = ( new SettingNoThemeCss() )->getOption();
+        if ( !empty( $settingNoThemeCss ) ) {
+            return;
+        }
 
-        wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/css/main.min.css', [], $this->version, 'all' );
+        wp_enqueue_style( $this->themeName . '-main', get_stylesheet_directory_uri() . '/css/main.min.css', [], $this->version, 'all' );
 
     }
 
     /**
      * Register the stylesheets for the public-facing side of the site.
      *
+     * @return void
      * @since 0.1.0
      *
-     * @return void
      */
     public function enqueueScripts() {
 
@@ -97,23 +103,33 @@ class ElebeePublic {
             case 'latest-local':
                 wp_deregister_script( 'jquery' );
                 wp_register_script( 'jquery', Elebee_URL . '/Public/assets/js/jquery.min.js', [], '3.4.1' );
+                wp_enqueue_script( 'jquery-migrate-301', Elebee_URL . '/Public/assets/js/jquery-migrate-301.min.js', [ 'jquery' ], '3.0.1' );
                 break;
         }
 
-        if ( file_exists( Elebee_DIR . '/js/vendor.min.js')) {
+        $settingJQueryNoMigrate = ( new SettingJQueryNoMigrate() )->getOption();
+        if ( !empty( $settingJQueryNoMigrate ) ) {
+            wp_deregister_script( 'jquery-migrate' );
+            wp_deregister_script( 'jquery-migrate-301' );
+        }
+
+        if ( file_exists( Elebee_DIR . '/js/vendor.min.js' ) ) {
             wp_enqueue_script( $this->themeName . '-vendor', Elebee_URL . '/js/vendor.min.js', [ 'jquery' ], $this->version, true );
         }
-        wp_enqueue_script( $this->themeName . '-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
-        wp_localize_script( $this->themeName . '-main', 'themeVars', [
-            'websiteName' => get_bloginfo( 'name' ),
-            'websiteUrl' => esc_url( get_site_url() ),
-            'themeUrl' => esc_url( Elebee_URL ),
-            'ajaxUrl' => admin_url( 'admin-ajax.php' ),
-            'isSearch' => number_format( is_search() ),
-            'isMobile' => number_format( wp_is_mobile() ),
-            'debug' => number_format( WP_DEBUG ),
-            'live' => '<!-- heartbeat alive -->',
-        ] );
+
+        // Comment this in if we add some js to the theme
+        //wp_enqueue_script( $this->themeName . '-main', Elebee_URL . '/js/main.min.js', [ 'jquery' ], $this->version, true );
+
+        wp_add_inline_script( 'jquery', 'let themeVars = ' . json_encode( [
+                'websiteName' => get_bloginfo( 'name' ),
+                'websiteUrl' => esc_url( get_site_url() ),
+                'themeUrl' => esc_url( Elebee_URL ),
+                'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+                'isSearch' => number_format( is_search() ),
+                'isMobile' => number_format( wp_is_mobile() ),
+                'debug' => number_format( WP_DEBUG ),
+                'live' => '<!-- heartbeat alive -->',
+            ] ) . ';', 'before' );
 
         if ( WP_DEBUG ) {
             wp_enqueue_script( 'livereload', '//localhost:35729/livereload.js' );
@@ -125,7 +141,7 @@ class ElebeePublic {
     public function embedGoogleAnalytics() {
         $trackingId = ( new SettingTrackingId() )->getOption();
 
-        if( empty( $trackingId ) ) {
+        if ( empty( $trackingId ) ) {
             return;
         }
 
@@ -137,10 +153,9 @@ class ElebeePublic {
 
     }
 
-    public function embedIEConditionals () {
+    public function embedIEConditionals() {
         $ieConditionals = new Template( __DIR__ . '/partials/ie-conditionals.php' );
         $ieConditionals->render();
     }
-
 
 }

@@ -6,13 +6,13 @@
  */
 require_once( 'vendor/autoload.php' );
 
-if ( !defined( 'TEXTDOMAIN' ) ) {
+if ( !defined( 'Elebee_TEXTDOMAIN' ) ) {
 
-    define( 'TEXTDOMAIN', 'elebee' );
+    define( 'Elebee_TEXTDOMAIN', 'elebee' );
 
 }
 
-define( 'Elebee_VERISON', '1.0.3' );
+define( 'Elebee_VERISON', '1.1.0' );
 
 define( 'Elebee_URL', get_stylesheet_directory_uri() );
 define( 'Elebee_DIR', str_replace( '\\', '/', __DIR__ ) );

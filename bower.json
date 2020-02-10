@@ -2,6 +2,8 @@
   "name": "elebee",
   "dependencies": {
     "compass-mixins": "^1.0.2",
-    "normalize-css": "^7.0.0"
+    "normalize-css": "^7.0.0",
+    "jquery-migrate-301": "3.0.1",
+    "jquery": "^3.4.1"
   }
 }
