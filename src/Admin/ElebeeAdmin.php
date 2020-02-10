@@ -18,6 +18,7 @@ use ElebeeCore\Admin\Setting\Google\Analytics\SettingAnonymizeIp;
 use ElebeeCore\Admin\Setting\Google\Analytics\SettingTrackingId;
 use ElebeeCore\Admin\Setting\SettingJQuery;
 use ElebeeCore\Admin\Setting\SettingJQueryNoMigrate;
+use ElebeeCore\Admin\Setting\SettingNoThemeCss;
 use ElebeeCore\Admin\Setting\SettingIsExclusive;
 use ElebeeCore\Lib\Util\AdminNotice\AdminNotice;
 use ElebeeCore\Lib\Util\Template;
@@ -148,6 +149,8 @@ class ElebeeAdmin {
         $settingJQuery->register( 'elebee_settings' );
         $settingJQueryNoMigrate = new SettingJQueryNoMigrate();
         $settingJQueryNoMigrate->register( 'elebee_settings' );
+        $settingNoThemeCss = new SettingNoThemeCss();
+        $settingNoThemeCss->register( 'elebee_settings' );
 
         $settingGoogleAnalyticsTrackingId = new SettingTrackingId();
         $settingGoogleAnalyticsTrackingId->register( 'elebee_settings', 'default', [
