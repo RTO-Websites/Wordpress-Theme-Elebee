@@ -11,3 +11,8 @@
 a {
   text-decoration: none;
 }
+
+a[href^='tel'] {
+  color: inherit; /* Inherit text color of parent element. */
+}
+
