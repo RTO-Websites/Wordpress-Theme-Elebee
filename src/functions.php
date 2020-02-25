@@ -12,7 +12,7 @@ if ( !defined( 'Elebee_TEXTDOMAIN' ) ) {
 
 }
 
-define( 'Elebee_VERISON', '1.1.1' );
+define( 'Elebee_VERISON', '1.1.2' );
 
 define( 'Elebee_URL', get_stylesheet_directory_uri() );
 define( 'Elebee_DIR', str_replace( '\\', '/', __DIR__ ) );
