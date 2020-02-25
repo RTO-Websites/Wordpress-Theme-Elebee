@@ -16,3 +16,10 @@ a[href^='tel'] {
   color: inherit; /* Inherit text color of parent element. */
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
